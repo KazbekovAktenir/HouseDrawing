@@ -1,24 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#87CEEB">
 
-    <!-- текстовое поле для демонстрации структуры макета -->
+    <!-- Заголовок -->
     <TextView
         android:id="@+id/title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
-        android:text="House Drawing"
+        android:text="🏠 House Drawing"
         android:textSize="24sp"
-        android:textColor="#000" />
+        android:textColor="#2C3E50"
+        android:textStyle="bold" />
 
-    <!-- HouseView займёт всё пространство -->
-    <View
-        android:id="@+id/houseViewPlaceholder"
+    <!-- Кнопка переключения темы -->
+    <Button
+        android:id="@+id/btnTheme"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="🌙 Ночь"
+        android:textSize="16sp"
+        android:paddingHorizontal="30dp"
+        android:backgroundTint="#34495E"
+        android:textColor="#FFFFFF" />
+
+    <!-- HouseView -->
+    <com.example.housedrawing.HouseView
+        android:id="@+id/houseView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/title" />
+        android:layout_below="@id/btnTheme"
+        android:layout_marginTop="20dp" />
 
 </RelativeLayout>
